@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        "use strict"
+
+
+        function sum(arg1, arg2) {
+            return arg1 + arg2;
+        }
+
+        function sub(arg1, arg2) {
+            return arg1 - arg2;
+        }
+
+        function multi(arg1, arg2) {
+            return arg1 * arg2;
+        }
+
+        function div(arg1, arg2) {
+            return arg1 / arg2;
+        }
+
+
+        function mathOperation(arg1, arg2, operation) {
+            switch (operation) {
+                case ("+"):
+                    let resultSum = sum(arg1, arg2);
+                    alert("сумма чисел: " + resultSum);
+                    break;
+                case ("-"):
+                    let resultSub = sub(arg1, arg2);
+                    alert("разность чисел: " + resultSub);
+                    break;
+                case ("*"):
+                    let resultMulti = multi(arg1, arg2);
+                    alert("произведение чисел: " + resultMulti);
+                    break;
+                case ("/"):
+                    let resultDiv = div(arg1, arg2);
+                    alert("частное чисел: " + resultDiv);
+                    break;
+            }
+        }
+
+        let arg1 = +prompt("введите первое число")
+        if (isNaN(arg1)) {
+            let arg1 = +prompt("Вы ввели не число. Повторите")
+        }
+
+        let arg2 = +prompt("введите второе число")
+        if (isNaN(arg2)) {
+            let arg2 = +prompt("Вы ввели не число. Повторите")
+        }
+
+        let operation = prompt("введите математические оператор: +, -, /, *")
+        if (operation !== "+" || operation !== "-" || operation !== "/" || operation !== "*") {
+            let operation = prompt("Вы ввели не математический оператор. Повторите")
+        }
+
+        let result = mathOperation(arg1, arg2, operation);
+
+
+    </script>
+</body>
+
+</html>
