@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        "use strict"
+
+        function diff(z, y) {
+            return z - y;
+        }
+
+        function multi(z, y) {
+            return z * y;
+        }
+
+        function summ(z, y) {
+            return z + y;
+        }
+
+
+        let z = +prompt("Введите превое отрицательное, 0 или положительное число")
+        let y = +prompt("Введите второе отрицательное, 0 или положительное число")
+
+
+
+        if (z >= 0 && y >= 0) {
+            let result = diff(z, y);
+            alert(result);
+        } else if (z < 0 && z < 0) {
+            let result = multi(z, y);
+            alert(result);
+        } else if (z >= 0 || z < 0 && y >= 0 || y < 0) {
+            let result = summ(z, y);
+            alert(result);
+        }
+
+    </script>
+
+</body>
+
+</html>
